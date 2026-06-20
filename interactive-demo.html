@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Interactive Test | Memory Engine Commercial v1.0</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="interactive-demo.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Memory Engine</a>
+      <nav aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="interactive-demo.html" aria-current="page">Interactive Test</a>
+        <a href="live.html">Live Comparison</a>
+        <a href="index.html#benchmarks">Benchmarks</a>
+        <a href="early-access.html">Start Free Trial</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="interactive-hero">
+        <div>
+          <p class="eyebrow">Local browser demo</p>
+          <h1>Interactive Memory Test</h1>
+          <p class="lede">Run customer-style memory scenarios directly in the browser. No backend, no secrets, and no model-provider calls.</p>
+        </div>
+        <div class="offline-panel" aria-label="Offline execution details">
+          <strong>Offline only</strong>
+          <span>No model-provider calls or external demo requests.</span>
+        </div>
+      </section>
+
+      <section class="interactive-layout" aria-label="Interactive demo">
+        <aside class="mode-panel">
+          <p class="eyebrow">Demo modes</p>
+          <div class="mode-list" role="tablist" aria-label="Memory demo mode">
+            <button class="tab active" data-mode="companion" type="button">AI Companion</button>
+            <button class="tab" data-mode="agent" type="button">AI Agent</button>
+            <button class="tab" data-mode="game" type="button">Game NPC</button>
+            <button class="tab" data-mode="benchmark" type="button">Large Context Benchmark</button>
+          </div>
+
+          <div class="benchmark-picker" id="benchmark-picker" hidden>
+            <p class="eyebrow">Records stored</p>
+            <div class="record-buttons" role="group" aria-label="Benchmark record count">
+              <button class="step-button active" data-records="500" type="button">500</button>
+              <button class="step-button" data-records="1000" type="button">1,000</button>
+              <button class="step-button" data-records="5000" type="button">5,000</button>
+            </div>
+          </div>
+        </aside>
+
+        <section class="demo-results" aria-live="polite">
+          <div class="result-header">
+            <div>
+              <p class="eyebrow" id="mode-eyebrow">AI Companion</p>
+              <h2 id="mode-title">User preference memory</h2>
+            </div>
+            <button class="button primary" id="run-demo-button" type="button">Run Demo</button>
+          </div>
+
+          <div class="memory-grid">
+            <article class="memory-card">
+              <span>Stored memory</span>
+              <p id="stored-memory">User prefers evening check-ins.</p>
+            </article>
+            <article class="memory-card">
+              <span>Retrieved memory</span>
+              <p id="retrieved-memory">User prefers evening check-ins.</p>
+            </article>
+          </div>
+
+          <div class="token-grid">
+            <article>
+              <span>Standard Context Tokens</span>
+              <strong id="standard-tokens">581</strong>
+            </article>
+            <article>
+              <span>Memory Engine Tokens</span>
+              <strong id="engine-tokens">16</strong>
+            </article>
+            <article>
+              <span>Tokens Saved</span>
+              <strong id="tokens-saved">565</strong>
+            </article>
+            <article>
+              <span>Token Reduction</span>
+              <strong id="reduction-percent">97.25%</strong>
+            </article>
+          </div>
+
+          <article class="context-panel">
+            <div>
+              <span>Context packet</span>
+              <strong id="relevant-count">1 relevant memory</strong>
+            </div>
+            <pre id="context-packet">[1] (preference, importance=0.92) User prefers evening check-ins.</pre>
+          </article>
+        </section>
+      </section>
+
+      <section class="section lead-section" id="trial-request">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Try Memory Engine with your workflow</h2>
+          <p>For pilot access or a product walkthrough, contact Sential Labs directly. This page is fully static and does not collect contact details.</p>
+        </div>
+        <div class="contact-card">
+          <span>Contact</span>
+          <strong>sentialabs.ai@gmail.com</strong>
+          <p>Include your company, use case, and which demo mode best matches your product.</p>
+          <a class="button primary" href="mailto:sentialabs.ai@gmail.com?subject=Memory%20Engine%20Interactive%20Demo">Email Sential Labs</a>
+        </div>
+      </section>
+    </main>
+
+    <script src="interactive-demo.js"></script>
+  </body>
+</html>

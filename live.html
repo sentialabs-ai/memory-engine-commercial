@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Live Comparison | Memory Engine Commercial v1.0</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html">Memory Engine</a>
+      <nav aria-label="Primary">
+        <a href="index.html#demo">Demo</a>
+        <a href="interactive-demo.html">Interactive Test</a>
+        <a href="live.html" aria-current="page">Live Comparison</a>
+        <a href="index.html#benchmarks">Benchmarks</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="live-hero">
+        <div>
+          <p class="eyebrow">Live comparison</p>
+          <h1>Standard Context vs Memory Engine</h1>
+          <p class="lede">Select a customer scenario and compare token use, memory recall, and compression savings side by side.</p>
+        </div>
+        <div class="live-controls" role="tablist" aria-label="Live comparison scenario">
+          <button class="tab active" data-live-scenario="companion" type="button">AI Companion</button>
+          <button class="tab" data-live-scenario="agent" type="button">AI Agent</button>
+          <button class="tab" data-live-scenario="game" type="button">Game Studio</button>
+        </div>
+      </section>
+
+      <section class="live-board" aria-live="polite">
+        <article class="live-column standard">
+          <div class="column-header">
+            <p class="eyebrow">Standard Context</p>
+            <h2>Full History Prompting</h2>
+          </div>
+          <div class="live-stat">
+            <span>Token used</span>
+            <strong id="live-standard-tokens">18,400</strong>
+          </div>
+          <div class="live-stat">
+            <span>Memory recalled</span>
+            <strong id="live-standard-recalled">Unfiltered transcript</strong>
+          </div>
+          <div class="live-stat">
+            <span>Compression saved</span>
+            <strong id="live-standard-saved">0%</strong>
+          </div>
+          <div class="live-meter"><span id="live-standard-meter"></span></div>
+          <ul id="live-standard-list"></ul>
+        </article>
+
+        <article class="live-column engine">
+          <div class="column-header">
+            <p class="eyebrow">Memory Engine</p>
+            <h2>Optimized Context Packet</h2>
+          </div>
+          <div class="live-stat">
+            <span>Token used</span>
+            <strong id="live-engine-tokens">460</strong>
+          </div>
+          <div class="live-stat">
+            <span>Memory recalled</span>
+            <strong id="live-engine-recalled">6 records</strong>
+          </div>
+          <div class="live-stat">
+            <span>Compression saved</span>
+            <strong id="live-engine-saved">Up to 80%+ Token Reduction</strong>
+          </div>
+          <div class="live-meter"><span id="live-engine-meter"></span></div>
+          <ul id="live-engine-list"></ul>
+        </article>
+      </section>
+
+      <section class="section public-note">
+        <p class="eyebrow">Public benchmark wording</p>
+        <h2>Conservative external claim</h2>
+        <p>Memory Engine uses one public benchmark metric: <strong>Up to 80%+ Token Reduction</strong>.</p>
+      </section>
+    </main>
+
+    <script src="live.js"></script>
+  </body>
+</html>
