@@ -801,9 +801,26 @@ form {
   margin-bottom: 4px;
 }
 
-.contact-card .button {
+.inline-email {
+  color: var(--text);
+}
+
+.contact-list {
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.contact-actions .button {
   justify-content: center;
-  width: fit-content;
 }
 
 .form-link {
